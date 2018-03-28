@@ -22,6 +22,14 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="vslaunchpad">
     <title>code.vsanthanam.com</title>
+    <script type="text/javascript">
+    app.use(express.static(path.join(__dirname, 'build')));
+    app.get('/*', function (req, res) {
+
+      res.sendFile(path.join(__dirname, 'build', 'index.html'));
+      
+    });
+    </script>
   </head>
   <body>
     <noscript>
