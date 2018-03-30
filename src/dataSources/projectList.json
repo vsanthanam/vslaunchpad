@@ -14,6 +14,19 @@
         "name":"Memoria",
         "key":"memoria",
         "desc":"macOS UI for memtest"
+      },
+      {
+        "name":"StatioKit",
+        "key":"statiokit",
+        "desc":"iOS Framework for System Monitoring"
+      },
+      {
+        "name":"Statio",
+        "key":"statio",
+        "desc":"iOS System Monitor",
+        "url":"https://www.appstore.com/Statio",
+        "display_url":"https://statio.vsanthanam.com"
+
       }
 
 ]

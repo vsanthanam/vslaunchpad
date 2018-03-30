@@ -63,6 +63,11 @@
         "key":"email",
         "url":"mailto:talkto@vsanthanam.com",
         "display_url":"talkto@vsanthanam.com"
+      },
+      {
+        "name":"Pinterest",
+        "key":"pinterest",
+        "desc":"vsanthanam"
       }
 
 ]
