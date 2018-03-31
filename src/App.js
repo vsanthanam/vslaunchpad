@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import LinkView from './views/LinkView/LinkView.js';
+import LinkView from './views/LinkView/LinkView.jsx';
 
 import LinkController from './LinkController.js';
 

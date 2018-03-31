@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 
-import HeaderBar from '../../components/HeaderBar/HeaderBar.js';
-import LinkSelector from '../../components/LinkSelector/LinkSelector.js';
-import LinkTable from '../../components/LinkTable/LinkTable.js';
-import FooterBar from '../../components/FooterBar/FooterBar.js';
-import SearchBar from '../../components/SearchBar/SearchBar.js';
-import AboutModal from '../../components/AboutModal/AboutModal.js';
+import HeaderBar from '../../components/HeaderBar/HeaderBar.jsx';
+import LinkSelector from '../../components/LinkSelector/LinkSelector.jsx';
+import LinkTable from '../../components/LinkTable/LinkTable.jsx';
+import FooterBar from '../../components/FooterBar/FooterBar.jsx';
+import SearchBar from '../../components/SearchBar/SearchBar.jsx';
+import AboutModal from '../../components/AboutModal/AboutModal.jsx';
 
 import { openLink } from '../../LinkController.js';
 
