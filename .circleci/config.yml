@@ -18,9 +18,11 @@ jobs:
           name: Static Type Check with Flow
           command: npm run flow
       - run:
-          name: Create Production build
+          name: Create Production Build
           command: npm run build
       - store_artifacts:
           path: ~/vslaunchpad/artifacts
-      - deploy:
+    deploy:
+      - run:
+          name: Deploy to Surge.sh
           command: npm run deploy
