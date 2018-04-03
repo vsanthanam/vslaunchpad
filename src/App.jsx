@@ -10,7 +10,7 @@ import AllView from './views/AllView/AllView';
 
 import './App.less';
 
-Modal.setAppElement('#root');
+// Modal.setAppElement('#root');
 
 type Props = {};
 type State = {};
