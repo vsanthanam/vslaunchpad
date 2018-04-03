@@ -18,6 +18,9 @@ jobs:
           name: Static Type Check with Flow
           command: npm run flow
       - run:
+          name: Test Build
+          Command: npm test
+      - run:
           name: Create Production Build
           command: npm run build
       - store_artifacts:
