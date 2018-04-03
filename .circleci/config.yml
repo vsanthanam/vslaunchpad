@@ -23,6 +23,8 @@ jobs:
       - store_artifacts:
           path: ~/vslaunchpad/artifacts
   deploy:
+    docker:
+      - image: circleci/node:7.10
     working_directory: ~/vslaunchpad
     steps:
       - run:
