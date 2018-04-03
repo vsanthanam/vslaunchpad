@@ -11,9 +11,17 @@ jobs:
       - run:
           name: Prepare Artifact Storage
           command: mkdir -p ~/vslaunchpad/artifacts
+      - restore_cache:
+          keys:
+            - vsl-v1-{{ checksum "package.json" }}
       - run:
           name: Install Packages
           command: npm install
+      - save_cache:
+          keys:
+            - vsl-v1-{{ checksum "package.json" }}
+          paths:
+            - /src/node_modules
       - run:
           name: Static Type Check with Flow
           command: npm run flow
