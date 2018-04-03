@@ -1,8 +1,15 @@
-import React, { Component } from 'react';
+// @flow
+
+import * as React from 'react';
 
 import './LinkSelector.less';
 
-class LinkSelector extends Component {
+type LinkSelectorProps = {
+  emphasized: boolean,
+  name: string
+};
+
+class LinkSelector extends React.Component<LinkSelectorProps> {
 
   render() {
 

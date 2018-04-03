@@ -1,8 +1,17 @@
-import React, { Component } from 'react';
+// @flow
+
+import * as React from 'react';
 
 import './SearchBar.less'
 
-class SearchBar extends Component {
+type SearchBarProps = {
+
+  inputid: string,
+  handleKeyUp: () => void
+
+}
+
+class SearchBar extends React.Component<SearchBarProps> {
 
   render() {
 

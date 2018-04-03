@@ -1,8 +1,15 @@
-import React, { Component } from 'react';
+// @flow
+
+import * as React from 'react';
 
 import './HeaderBar.less';
 
-class HeaderBar extends Component {
+type HeaderBarProps = {
+  title: string,
+  subtitle: string
+};
+
+class HeaderBar extends React.Component<HeaderBarProps> {
 
   render() {
 

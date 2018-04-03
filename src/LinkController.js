@@ -1,6 +1,21 @@
+// @flow
+
+type Link = {
+
+  name:string,
+  key:string,
+  url:string,
+  desc:string,
+  display_url:string
+
+}
+
 class LinkController {
 
-  constructor(name, links) {
+  name: string;
+  links: Array<Link>;
+
+  constructor(name: string, links: Array<Link>) {
 
     function sortFunc(a,b) {
 
@@ -8,7 +23,7 @@ class LinkController {
 
         return -1;
 
-      } else if (a.nav > b.name) {
+      } else if (a.name > b.name) {
 
         return 1;
 
@@ -23,7 +38,7 @@ class LinkController {
 
   }
 
-  filteredLinks(filter) {
+  filteredLinks(filter: string) {
 
     var filterString = filter.toUpperCase();
 
@@ -64,7 +79,7 @@ class LinkController {
 
 }
 
-export function openLink(link) {
+export function openLink(link: Link) {
 
   if (urlForLink(link).indexOf("https://") >= 0) {
 
@@ -79,7 +94,7 @@ export function openLink(link) {
 
 }
 
-export function urlForLink(link) {
+export function urlForLink(link: Link) {
 
   if (link.url === undefined) {
 
@@ -91,9 +106,14 @@ export function urlForLink(link) {
 
 }
 
-export function imageUrlForLink(link) {
+export function imageUrlForLink(link: Link) {
 
-  return process.env.PUBLIC_URL + "/icons/" + link.key + ".svg"
+  const publicUrl = process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "";
+
+  // eslint-disable-next-line
+  (publicUrl: string);
+
+  return publicUrl + "/icons/" + link.key + ".svg"
 
 }
 

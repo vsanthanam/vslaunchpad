@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ import './LinkView.less';
 
 Modal.setAppElement('#root');
 
-class LinkView extends Component {
+class LinkView extends React.Component {
 
   constructor(props) {
 

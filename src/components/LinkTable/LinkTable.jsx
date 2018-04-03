@@ -1,9 +1,26 @@
-import React, { Component } from 'react';
+// @flow
+
+import * as React from 'react';
+
 import { urlForLink, openLink, imageUrlForLink } from '../../LinkController.js';
 
 import './LinkTable.less';
 
-class LinkTable extends Component {
+type Link = {
+
+  name:string,
+  key:string,
+  url:string,
+  desc:string,
+  display_url:string
+
+}
+
+type LinkTableProps = {
+  dataSource:Array<Link>
+};
+
+class LinkTable extends React.Component<LinkTableProps> {
 
   render() {
 
@@ -39,7 +56,11 @@ class LinkTable extends Component {
 
 }
 
-class LinkRow extends Component {
+type LinkRowProps = {
+  link: Link
+}
+
+class LinkRow extends React.Component<LinkRowProps> {
 
   launch() {
 
@@ -62,7 +83,11 @@ class LinkRow extends Component {
 
 }
 
-class LinkIconCell extends Component {
+type LinkIconCellProps = {
+  link: Link
+}
+
+class LinkIconCell extends React.Component<LinkIconCellProps> {
 
   render() {
 
@@ -80,7 +105,11 @@ class LinkIconCell extends Component {
 
 }
 
-class LinkDetailCell extends Component {
+type LinkDetailCellProps = {
+  link: Link
+}
+
+class LinkDetailCell extends React.Component<LinkDetailCellProps> {
 
   descriptionForLink(link) {
 
@@ -113,7 +142,9 @@ class LinkDetailCell extends Component {
 
 }
 
-class EmptyRow extends Component {
+
+
+class EmptyRow extends React.Component<{}> {
 
   render() {
 

@@ -1,8 +1,14 @@
-import React, { Component } from 'react';
+// @flow
+
+import * as React from 'react';
 
 import './FooterBar.less'
 
-class FooterBar extends Component {
+type FooterBarProps = {
+  handleOnClick: () => void
+};
+
+class FooterBar extends React.Component<FooterBarProps> {
 
   render() {
 
