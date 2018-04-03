@@ -18,8 +18,7 @@ jobs:
           name: Install Packages
           command: npm install
       - save_cache:
-          keys:
-            - vsl-v1-{{ checksum "package.json" }}
+          key: vsl-v1-{{ checksum "package.json" }}
           paths:
             - /src/node_modules
       - run:
