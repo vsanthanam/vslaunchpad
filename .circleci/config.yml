@@ -22,11 +22,6 @@ jobs:
           command: npm run build
       - store_artifacts:
           path: ~/vslaunchpad/artifacts
-  deploy:
-    docker:
-      - image: circleci/node:7.10
-    working_directory: ~/vslaunchpad
-    steps:
       - run:
           name: Deploy to Surge.sh
           command: npm run deploy
