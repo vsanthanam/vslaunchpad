@@ -6,7 +6,9 @@ import LinkView from '../LinkView/LinkView';
 import LinkController from '../../LinkController';
 import ProjectList from '../../dataSources/ProjectList.json';
 
-class ProjectView extends React.Component {
+type ProjectViewProps = {};
+
+class ProjectView extends React.Component<ProjectViewProps> {
 
   render() {
 

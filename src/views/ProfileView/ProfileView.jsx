@@ -6,7 +6,9 @@ import LinkView from '../LinkView/LinkView';
 import LinkController from '../../LinkController';
 import ProfileList from '../../dataSources/ProfileList.json';
 
-class ProfileView extends React.Component {
+type ProfileViewProps = {};
+
+class ProfileView extends React.Component<ProfileViewProps> {
 
   render() {
 

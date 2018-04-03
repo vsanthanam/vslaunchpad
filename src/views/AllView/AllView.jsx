@@ -7,7 +7,9 @@ import LinkController from '../../LinkController';
 import ProfileList from '../../dataSources/ProfileList.json';
 import ProjectList from '../../dataSources/ProjectList.json';
 
-class AllView extends React.Component {
+type AllViewProps = {};
+
+class AllView extends React.Component<AllViewProps> {
 
   render() {
 
