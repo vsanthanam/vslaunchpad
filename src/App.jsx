@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import LinkView from './views/LinkView/LinkView.jsx';
+import LinkView from './views/LinkView/LinkView';
 
-import LinkController from './LinkController.js';
+import LinkController from './LinkController';
 
-import ProjectList from './dataSources/projectList.json';
-import ProfileList from './dataSources/profileList.json';
+import ProjectList from './dataSources/ProjectList.json';
+import ProfileList from './dataSources/ProfileList.json';
 
 import './App.less';
 
