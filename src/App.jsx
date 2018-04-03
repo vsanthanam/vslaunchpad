@@ -26,6 +26,7 @@ class App extends React.Component<Props, State> {
           <Route exact path="/all" component={AllView} />
         </Switch>
       </Router>
+      
     );
 
   }
