@@ -8,17 +8,18 @@ jobs:
     working_directory: ~/vslaunchpad
     steps:
       - checkout
-      - run: mkdir -p ~/vslaunchpad/artifacts
+      - run:
+          name: Prepare Artifact Storage
+          command: mkdir -p ~/vslaunchpad/artifacts
       - run:
           name: Install Packages
           command: npm install
-      # run tests!
       - run:
           name: Static Type Check with Flow
           command: npm run flow
       - run:
           name: Create Production build
-          command: npm run deploy
+          command: npm run build
       - store_artifacts:
           path: ~/vslaunchpad/artifacts
       - deploy:
