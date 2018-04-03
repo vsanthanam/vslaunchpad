@@ -16,5 +16,10 @@ jobs:
       - run:
           name: Static Type Check with Flow
           command: npm run flow
+      - run:
+          name: Create Production build
+          command: npm run deploy
       - store_artifacts:
           path: ~/vslaunchpad/artifacts
+      - deploy:
+        command: npm run deploy
