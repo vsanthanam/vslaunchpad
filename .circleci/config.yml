@@ -22,4 +22,4 @@ jobs:
       - store_artifacts:
           path: ~/vslaunchpad/artifacts
       - deploy:
-        command: npm run deploy
+          command: npm run deploy
