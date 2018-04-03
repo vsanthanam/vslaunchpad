@@ -5,10 +5,10 @@ jobs:
   build:
     docker:
       - image: circleci/node:7.10
-    working_directory: /home/ubuntu/vslaunchpad
+    working_directory: ~/vslaunchpad
     steps:
       - checkout
-      - run: mkdir -p /home/ubuntu/vslaunchpad/artifacts
+      - run: mkdir -p ~/vslaunchpad/artifacts
       - run:
           name: Install Packages
           command: npm install
@@ -17,4 +17,4 @@ jobs:
           name: Static Type Check with Flow
           command: npm run flow
       - store_artifacts:
-          path: /home/ubuntu/vslaunchpad/artifacts
+          path: ~/vslaunchpad/artifacts
