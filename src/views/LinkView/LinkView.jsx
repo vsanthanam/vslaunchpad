@@ -45,11 +45,11 @@ class LinkView extends React.Component {
         <HeaderBar title={this.props.title} subtitle={this.props.subtitle}/>
         <div className="content-container">
           <SearchBar inputid="link-search-field" handleKeyUp={this.searchDataSource} />
-          <Link to="/projects">
-            <LinkSelector name="projects" emphasized={this.props.controller.name === "projects"} />
-          </Link>
           <Link to="/profiles">
             <LinkSelector name="profiles" emphasized={this.props.controller.name === "profiles"} />
+          </Link>
+          <Link to="/projects">
+            <LinkSelector name="projects" emphasized={this.props.controller.name === "projects"} />
           </Link>
           <Link to="/all">
             <LinkSelector name="all" emphasized={this.props.controller.name === "all"} />

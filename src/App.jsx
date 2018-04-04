@@ -20,9 +20,9 @@ class App extends React.Component<Props, State> {
 
       <Router>
         <Switch>
-          <Route exact path="/" component={ProjectView} />
-          <Route exact path="/projects" component={ProjectView} />
+          <Route exact path="/" component={ProfileView} />
           <Route exact path="/profiles" component={ProfileView} />
+          <Route exact path="/projects" component={ProjectView} />
           <Route exact path="/all" component={AllView} />
         </Switch>
       </Router>

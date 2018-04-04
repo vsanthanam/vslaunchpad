@@ -19,7 +19,7 @@ class AllView extends React.Component<AllViewProps> {
 
     return(
 
-      <LinkView title="projects & profiles" subtitle="https://{identifier}.vsanthanam.com" controller={controller} />
+      <LinkView title="profiles & projects" subtitle="https://{identifier}.vsanthanam.com" controller={controller} />
 
     );
 
