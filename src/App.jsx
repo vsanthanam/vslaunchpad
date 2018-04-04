@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Modal from 'react-modal';
 
 import ProjectView from './views/ProjectView/ProjectView';
 import ProfileView from './views/ProfileView/ProfileView';

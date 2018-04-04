@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 
 import HeaderBar from '../../components/HeaderBar/HeaderBar';
