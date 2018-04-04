@@ -14,6 +14,7 @@ This way, I could easily send someone to, say, my LinkedIn profile with the foll
  * additional cra scripts from [custom-react-scripts](https://www.npmjs.com/package/custom-react-scripts)
  * CSS preprocessing with [LESS](https://lesscss.org)
  * JavaScript static type checking with [flow](https://www.flow.org)
+ * CI with [Travis-CI](https://travis-ci.org)
 
  ## run it locally
 
@@ -23,10 +24,11 @@ This way, I could easily send someone to, say, my LinkedIn profile with the foll
 
  ## make your own
 
- * you might want to edit the values for 'deploy' in the scripts part of `package.json` and replace that with your own thing.
+ * you might want to edit the values for `deploy` key in the scripts part of `package.json` and replace that with your own thing.
  * you can edit colors in `colors.less`
  * edit `./src/dataSource/ProjectList.json` and `./src/dataSources/ProfileList.json` to populate your own values
  * run `npm flow` to run static type checking.
 
  ## CI
- [![Build Status](https://travis-ci.org/vsanthanam/vslaunchpad.svg?branch=master)](https://travis-ci.org/vsanthanam/vslaunchpad)
+
+ Latest Status: [![Build Status](https://travis-ci.org/vsanthanam/vslaunchpad.svg?branch=master)](https://travis-ci.org/vsanthanam/vslaunchpad)
