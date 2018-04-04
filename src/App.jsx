@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Modal from 'react-modal';
 
 import ProjectView from './views/ProjectView/ProjectView';
 import ProfileView from './views/ProfileView/ProfileView';
@@ -26,7 +27,7 @@ class App extends React.Component<Props, State> {
           <Route exact path="/all" component={AllView} />
         </Switch>
       </Router>
-      
+
     );
 
   }

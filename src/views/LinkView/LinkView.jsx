@@ -13,8 +13,6 @@ import { openLink } from '../../LinkController';
 
 import './LinkView.less';
 
-Modal.setAppElement('#root');
-
 class LinkView extends React.Component {
 
   constructor(props) {

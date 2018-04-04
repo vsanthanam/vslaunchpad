@@ -16,46 +16,6 @@ type Link = {
 
 }
 
-type LinkTableProps = {
-  dataSource:Array<Link>
-};
-
-class LinkTable extends React.Component<LinkTableProps> {
-
-  render() {
-
-    var rows = [];
-
-    if (this.props.dataSource.length > 0) {
-
-      for (var i = 0; i < this.props.dataSource.length; i++) {
-
-        rows.push(<LinkRow key={this.props.dataSource[i].name} link={this.props.dataSource[i]} />);
-
-      }
-
-    } else {
-
-      rows.push(<EmptyRow key="empty"/>);
-
-    }
-
-    return(
-
-      <div className="link-table-container">
-        <table className="link-table">
-          <tbody>
-            {rows}
-          </tbody>
-        </table>
-      </div>
-
-    )
-
-  }
-
-}
-
 type LinkRowProps = {
   link: Link
 }
@@ -142,8 +102,6 @@ class LinkDetailCell extends React.Component<LinkDetailCellProps> {
 
 }
 
-
-
 class EmptyRow extends React.Component<{}> {
 
   render() {
@@ -157,6 +115,48 @@ class EmptyRow extends React.Component<{}> {
       </tr>
 
     );
+
+  }
+
+}
+
+type LinkTableProps = {
+
+  dataSource:Array<Link>
+
+};
+
+class LinkTable extends React.Component<LinkTableProps> {
+
+  render() {
+
+    var rows = [];
+
+    if (this.props.dataSource.length > 0) {
+
+      for (var i = 0; i < this.props.dataSource.length; i++) {
+
+        rows.push(<LinkRow key={this.props.dataSource[i].name} link={this.props.dataSource[i]} />);
+
+      }
+
+    } else {
+
+      rows.push(<EmptyRow key="empty"/>);
+
+    }
+
+    return(
+
+      <div className="link-table-container">
+        <table className="link-table">
+          <tbody>
+            {rows}
+          </tbody>
+        </table>
+      </div>
+
+    )
 
   }
 

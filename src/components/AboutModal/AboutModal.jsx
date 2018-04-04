@@ -18,7 +18,7 @@ class AboutModal extends React.Component<AboutModalProps> {
 
     return(
 
-      <Modal className="about-content-modal" isOpen={this.props.showModal} onRequestClose={this.props.onRequestClose} shouldFocusAfterRender={false} shouldCloseOnEsc={true} shouldCloseOnOverlayClick={true}>
+      <Modal className="about-content-modal" isOpen={this.props.showModal} onRequestClose={this.props.onRequestClose} shouldFocusAfterRender={false} shouldCloseOnEsc={true} shouldCloseOnOverlayClick={true} ariaHideApp={false}>
         <div className="about-content-container">
           <br />
           <h2>{"vslaunchpad"}</h2>
