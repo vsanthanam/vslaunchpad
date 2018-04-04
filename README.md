@@ -10,7 +10,7 @@ This way, I could easily send someone to, say, my LinkedIn profile with the foll
 
  I wanted to make a visual representation of my online identities and projects, so I built this this simple React.js app that allows a user to easily find exactly what they're looking for.
 
-check it out at [launchpad.vsanthanam.com](https://launchpad.vsanthanam.com)
+check it out at [www.talktovarun.com](https://www.talktovarun.com)
 
  * this project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), and is hosted on [surge.sh](https://surge.sh).
  * additional cra scripts from [custom-react-scripts](https://www.npmjs.com/package/custom-react-scripts)
