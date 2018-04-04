@@ -11,5 +11,5 @@ script:
 deploy:
   provider: surge
   project: ./build
-  domain: www.talktovarun.com
+  domain: launchpad.vsanthanam.com
   skip_cleanup: true
