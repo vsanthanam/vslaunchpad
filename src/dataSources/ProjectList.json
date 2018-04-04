@@ -23,7 +23,9 @@
       {
         "name":"Statio",
         "key":"statio",
-        "desc":"iOS System Monitor"
+        "desc":"iOS System Monitor",
+        "url":"http://www.statioapp.com",
+        "display_url":"https://www.statioapp.com"
       }
 
 ]
