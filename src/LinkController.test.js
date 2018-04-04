@@ -27,8 +27,6 @@ it('has property populated profile list', () => {
 
 import LinkController, { urlForLink, openLink, imageUrlForLink } from './LinkController';
 
-var links = [];
-
 const linkA = {
 
   "name":"A-Link",
@@ -70,11 +68,7 @@ const linkE = {
 
 }
 
-links.push(linkB);
-links.push(linkC);
-links.push(linkA);
-links.push(linkD);
-links.push(linkE)
+var links = [linkB, linkC, linkA, linkE, linkD];
 
 const controller = new LinkController('links', links);
 

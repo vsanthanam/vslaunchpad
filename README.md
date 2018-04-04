@@ -14,7 +14,6 @@ This way, I could easily send someone to, say, my LinkedIn profile with the foll
  * additional cra scripts from [custom-react-scripts](https://www.npmjs.com/package/custom-react-scripts)
  * CSS preprocessing with [LESS](https://lesscss.org)
  * JavaScript static type checking with [flow](https://www.flow.org)
- * Continuous Integration with [CircleCI](https://www.circleci.com)
 
  ## run it locally
 
@@ -24,12 +23,7 @@ This way, I could easily send someone to, say, my LinkedIn profile with the foll
 
  ## make your own
 
- * delete the '/.circleci' directory, it's specific to my build - test - integrate - deploy flow.
  * you might want to edit the values for 'deploy' in the scripts part of `package.json` and replace that with your own thing.
  * you can edit colors in `colors.less`
  * edit `./src/dataSource/ProjectList.json` and `./src/dataSources/ProfileList.json` to populate your own values
  * run `npm flow` to run static type checking.
-
- ## CI
-
- Latest Build: [![CircleCI](https://circleci.com/gh/vsanthanam/vslaunchpad.svg?style=svg)](https://circleci.com/gh/vsanthanam/vslaunchpad)
