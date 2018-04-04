@@ -54,7 +54,8 @@ class LinkController {
 
         var link = this.links[i];
 
-        var linkMatch = (link.name.toUpperCase().indexOf(filterString) >= 0);
+        var nameMatch = (link.name.toUpperCase().indexOf(filterString) >= 0);
+        var keyMatch = (link.key.toUpperCase().indexOf(filterString) >= 0);
         var descMatch = false;
 
         if (link.desc) {
@@ -63,7 +64,7 @@ class LinkController {
 
         }
 
-        if (linkMatch || descMatch) {
+        if (nameMatch || keyMatch || descMatch) {
 
           results.push(link);
 
