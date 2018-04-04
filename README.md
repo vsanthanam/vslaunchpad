@@ -10,6 +10,8 @@ This way, I could easily send someone to, say, my LinkedIn profile with the foll
 
  I wanted to make a visual representation of my online identities and projects, so I built this this simple React.js app that allows a user to easily find exactly what they're looking for.
 
+check it out at [https://launchpad.vsanthanam.com](launchpad.vsanthanam.com)
+
  * this project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), and is hosted on [surge.sh](https://surge.sh).
  * additional cra scripts from [custom-react-scripts](https://www.npmjs.com/package/custom-react-scripts)
  * CSS preprocessing with [LESS](https://lesscss.org)
@@ -27,8 +29,8 @@ This way, I could easily send someone to, say, my LinkedIn profile with the foll
  * you might want to edit the values for `deploy` key in the scripts part of `package.json` and replace that with your own thing.
  * you can edit colors in `colors.less`
  * edit `./src/dataSource/ProjectList.json` and `./src/dataSources/ProfileList.json` to populate your own values
- * run `npm flow` to run static type checking.
+ * run `npm run flow` to run static type checking.
 
  ## CI
 
- Latest Status: [![Build Status](https://travis-ci.org/vsanthanam/vslaunchpad.svg?branch=master)](https://travis-ci.org/vsanthanam/vslaunchpad)
+[![Build Status](https://travis-ci.org/vsanthanam/vslaunchpad.svg?branch=master)](https://travis-ci.org/vsanthanam/vslaunchpad)
