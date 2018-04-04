@@ -27,3 +27,6 @@ This way, I could easily send someone to, say, my LinkedIn profile with the foll
  * you can edit colors in `colors.less`
  * edit `./src/dataSource/ProjectList.json` and `./src/dataSources/ProfileList.json` to populate your own values
  * run `npm flow` to run static type checking.
+
+ ## CI
+ [![Build Status](https://travis-ci.org/vsanthanam/vslaunchpad.svg?branch=master)](https://travis-ci.org/vsanthanam/vslaunchpad)
