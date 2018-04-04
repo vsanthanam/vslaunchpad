@@ -8,3 +8,8 @@ script:
   - npm test
   - npm run flow
   - npm run build
+deploy:
+  provider: surge
+  project: ./static/
+  domain: example.surge.sh
+  skip_cleanup: true
