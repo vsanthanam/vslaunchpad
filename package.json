@@ -1,7 +1,7 @@
 {
   "name": "vslaunchpad",
   "version": "0.1.0",
-  "homepage": "https://launchpad.vsanthanam.com",
+  "homepage": "https://www.talktovarun.com",
   "private": true,
   "dependencies": {
     "ajv": "^6.4.0",
@@ -20,7 +20,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "deploy": "surge --project ./build --domain launchpad.vsanthanam.com"
+    "deploy": "surge --project ./build --domain www.talktovarun.com"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
