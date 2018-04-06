@@ -12,7 +12,7 @@ This way, I could easily send someone to, say, my LinkedIn profile with the foll
 
 check it out at `launchpad [dot] vsanthanam [dot] com`.
 
- * this project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), and is hosted on [surge.sh](https://surge.sh).
+ * this project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), and is hosted on [firebase](https://firebase.google.com).
  * additional cra scripts from [custom-react-scripts](https://www.npmjs.com/package/custom-react-scripts)
  * CSS preprocessing with [LESS](https://lesscss.org)
  * JavaScript static type checking with [flow](https://www.flow.org)
