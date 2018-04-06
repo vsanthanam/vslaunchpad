@@ -1,7 +1,7 @@
 {
   "name": "vslaunchpad",
   "version": "0.1.0",
-  "homepage": "https://www.statioapp.com",
+  "homepage": "https://www.talktovarun.com",
   "private": true,
   "dependencies": {
     "ajv": "^6.4.0",
@@ -20,11 +20,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "deploy": "surge --project ./build --domain www.statioapp.com"
+    "deploy": "firebase deploy"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-flow": "^6.23.0",
-    "surge": "^0.20.1"
+    "babel-preset-flow": "^6.23.0"
   }
 }

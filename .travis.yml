@@ -1,15 +1,22 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 cache:
   directories:
   - node_modules
 script:
-  - npm run flow
-  - npm test
-  - npm run build
+- npm run flow
+- npm test
+- npm run build
 deploy:
-  provider: surge
-  project: ./build
+  provider: firebase
+  token:
+    secure:
+    JWdLOZ/hUCgflMpW2LYj960lImPZ+nL84wl1fq+mwfn0v4xsm9/6Hd+44E6CgBPiL576xh2U03PgOQEeBXuSUJUO1Ku/tDlbH7iszPTCjxz49KqW3KCgyUsQtRt8d3vMI4dPuFx/uf4GxZE9Lc3VJyTFSRSuORgjTkzRO/wA4eLyXQmGXL3Qu7H7wGaaKfxgwvqPZWHj+L6hNlFIPruLd/x+suwMkwj4ickIVe19/eyJym6p4fgMeY5pv8s7d2HT6bWh85ReqhpcGt0sXn72CVV1mScpQchOnm6db44+NPlQK055IILOWw3e+ci0hHAwcFRVEEM9ZuRAH865biAUCQOZIZn5AAopO/DHJ63OBI7mB8cFO1Dg1KVADpA3BIRMoM3T1t3A3TA5mfpfttC0CGlV8pm7zz8oe68ghSB+98+6x3BQPBbzH2hDdAidx1CNVn39dHivpJVIjBkl6gq//lcWrI0oq5qzN/RCEfdzSH7gRSIRKtiYK4YZfRCsK4mgqShQYwCI2Ka0x7L4+2OLwLn2rL8EikeCpI/DP+hwsvR6Tlu0GQEni4w+t1pNv9hN2H+Sok7mGoacaV4d5bbP07g7IsUq+erngks0UHpHCn1QFukZNB6buSikHYU0zwOSBw45L0jl/PAE/2onEArLhJcczmdWsH19IaxK4Mg+mOE=
+  project: "./build"
   domain: launchpad.vsanthanam.com
   skip_cleanup: true
+
+env:
+  global:
+    secure: JWdLOZ/hUCgflMpW2LYj960lImPZ+nL84wl1fq+mwfn0v4xsm9/6Hd+44E6CgBPiL576xh2U03PgOQEeBXuSUJUO1Ku/tDlbH7iszPTCjxz49KqW3KCgyUsQtRt8d3vMI4dPuFx/uf4GxZE9Lc3VJyTFSRSuORgjTkzRO/wA4eLyXQmGXL3Qu7H7wGaaKfxgwvqPZWHj+L6hNlFIPruLd/x+suwMkwj4ickIVe19/eyJym6p4fgMeY5pv8s7d2HT6bWh85ReqhpcGt0sXn72CVV1mScpQchOnm6db44+NPlQK055IILOWw3e+ci0hHAwcFRVEEM9ZuRAH865biAUCQOZIZn5AAopO/DHJ63OBI7mB8cFO1Dg1KVADpA3BIRMoM3T1t3A3TA5mfpfttC0CGlV8pm7zz8oe68ghSB+98+6x3BQPBbzH2hDdAidx1CNVn39dHivpJVIjBkl6gq//lcWrI0oq5qzN/RCEfdzSH7gRSIRKtiYK4YZfRCsK4mgqShQYwCI2Ka0x7L4+2OLwLn2rL8EikeCpI/DP+hwsvR6Tlu0GQEni4w+t1pNv9hN2H+Sok7mGoacaV4d5bbP07g7IsUq+erngks0UHpHCn1QFukZNB6buSikHYU0zwOSBw45L0jl/PAE/2onEArLhJcczmdWsH19IaxK4Mg+mOE=
