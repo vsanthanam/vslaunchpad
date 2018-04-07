@@ -11,8 +11,6 @@
 
 # css-preprocessing
 src/**/*.css
-index.css
-App.css
 
 # misc
 .DS_Store
