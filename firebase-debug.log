@@ -1,0 +1,41 @@
+[debug] [2018-04-07T17:34:34.897Z] ----------------------------------------------------------------------
+[debug] [2018-04-07T17:34:34.899Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-04-07T17:34:34.899Z] CLI Version:   3.18.1
+[debug] [2018-04-07T17:34:34.900Z] Platform:      darwin
+[debug] [2018-04-07T17:34:34.900Z] Node Version:  v8.10.0
+[debug] [2018-04-07T17:34:34.900Z] Time:          Sat Apr 07 2018 10:34:34 GMT-0700 (PDT)
+[debug] [2018-04-07T17:34:34.900Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-07T17:34:34.914Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-07T17:34:34.914Z] > authorizing via signed-in user
+[debug] [2018-04-07T17:34:34.916Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-07T17:34:34.916Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/-weVJydvuhQqjKPJVYpn1VkZJMGBAqVflRLdrQ1UoFc',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat Apr 07 2018 10:34:34 GMT-0700 (PDT)
+[debug] [2018-04-07T17:34:35.131Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-07T17:34:35.147Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/vslaunchpad  
+  
+ Sat Apr 07 2018 10:34:35 GMT-0700 (PDT)
+[debug] [2018-04-07T17:34:35.877Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-07T17:34:35.878Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/vslaunchpad/tokens  
+  
+ Sat Apr 07 2018 10:34:35 GMT-0700 (PDT)
+[debug] [2018-04-07T17:34:36.593Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'vslaunchpad'...
+[info] 
+[info] i  deploying database, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-04-07T17:34:37.006Z] >>> HTTP REQUEST PUT https://vslaunchpad.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+ 
+ Sat Apr 07 2018 10:34:37 GMT-0700 (PDT)
