@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "vslaunchpad"
+    "default": "vslaunchpad",
+    "staging": "vslaunchpad-stage"
   }
 }
