@@ -68,6 +68,10 @@
         "name":"Pinterest",
         "key":"pinterest",
         "desc":"vsanthanam"
+      },
+      {
+        "name":"Travis",
+        "key":"travis-ci"
       }
 
 ]
