@@ -72,6 +72,10 @@
       {
         "name":"Travis",
         "key":"travis-ci"
+      },
+      {
+        "name":"Crunchbase",
+        "key":"crunchbase"
       }
 
 ]
