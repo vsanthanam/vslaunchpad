@@ -4,7 +4,7 @@ var config = {
 
   // apiKey: "<API_KEY>",
   // authDomain: "vslaunchpad-stage.firebaseapp.com",
-  databaseURL: "https://vslaunchpad-stage.firebaseio.com"
+  databaseURL: "https://vslaunchpad.firebaseio.com"
   // storageBucket: "<BUCKET>.appspot.com",
 
 };
