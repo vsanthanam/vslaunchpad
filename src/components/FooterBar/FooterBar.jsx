@@ -5,7 +5,7 @@ import * as React from 'react';
 import './FooterBar.less'
 
 type FooterBarProps = {
-  handleOnClick: () => void
+  handleOnClick: (event: Event) => void
 };
 
 class FooterBar extends React.Component<FooterBarProps> {

@@ -120,9 +120,28 @@ class EmptyRow extends React.Component<{}> {
 
 }
 
+class LoadingRow extends React.Component<{}> {
+
+  render() {
+
+    return(
+
+      <tr>
+        <td className="empty-row-content">
+        Loading
+        </td>
+      </tr>
+
+    );
+
+  }
+
+}
+
 type LinkTableProps = {
 
-  dataSource:Array<Link>
+  dataSource:Array<Link>,
+  loading: boolean
 
 };
 
@@ -139,6 +158,10 @@ class LinkTable extends React.Component<LinkTableProps> {
         rows.push(<LinkRow key={this.props.dataSource[i].name} link={this.props.dataSource[i]} />);
 
       }
+
+    } else if (this.props.loading) {
+
+      rows.push(<LoadingRow key="loading" />);
 
     } else {
 

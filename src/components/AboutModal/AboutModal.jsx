@@ -8,7 +8,7 @@ import './AboutModal.less';
 type AboutModalProps = {
 
   showModal: boolean,
-  onRequestClose: () => void
+  onRequestClose: (event: Event) => void
 
 }
 
