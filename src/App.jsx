@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ProjectView from './views/ProjectView/ProjectView';
 import ProfileView from './views/ProfileView/ProfileView';
 import AllView from './views/AllView/AllView';
+import { setupFirebase } from './parts/Firebase/Firebase';
 
 import './App.less';
 
@@ -13,6 +14,13 @@ type Props = {};
 type State = {};
 
 class App extends React.Component<Props, State> {
+
+  constructor(props: Props) {
+
+    super(props);
+    setupFirebase();
+
+  }
 
   render() {
 

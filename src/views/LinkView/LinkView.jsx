@@ -1,3 +1,5 @@
+// @flow
+
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,17 +10,31 @@ import FooterBar from '../../components/FooterBar/FooterBar';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import AboutModal from '../../components/AboutModal/AboutModal';
 
-import { openLink } from '../../LinkController';
+import LinkController, { openLink } from '../../LinkController';
 
 import './LinkView.less';
 
-class LinkView extends React.Component {
+type LinkViewProps = {
 
-  constructor(props) {
+  controller: LinkController,
+  title: string,
+  subtitle: string,
+  loading: boolean
+
+};
+type LinkViewState = {
+
+  dataSource: Array<Link>,
+  showAbout: boolean
+
+};
+
+class LinkView extends React.Component<LinkViewProps, LinkViewState> {
+
+  constructor(props: LinkViewProps) {
 
     super(props);
 
-    // var initialController = new LinkController("project", projectList);
     this.state = {dataSource:this.props.controller.links, showAbout:false};
 
     this.searchDataSource = this.searchDataSource.bind(this);
@@ -26,11 +42,24 @@ class LinkView extends React.Component {
 
   }
 
+  componentWillReceiveProps(nextProps: LinkViewProps) {
+
+    this.setState({dataSource:nextProps.controller.links});
+
+  }
+
   componentDidMount() {
 
     if (!isTouchDevice()) {
 
-      document.getElementById("link-search-field").focus();
+
+      var input = document.getElementById("link-search-field")
+
+      if (input instanceof HTMLInputElement) {
+
+        input.focus();
+
+      }
 
     }
 
@@ -54,7 +83,7 @@ class LinkView extends React.Component {
           <Link to="/all">
             <LinkSelector name="all" emphasized={this.props.controller.name === "all"} />
           </Link>
-          <LinkTable dataSource={this.state.dataSource}/>
+          <LinkTable dataSource={this.state.dataSource} loading={this.props.loading}/>
         </div>
         <FooterBar handleOnClick={this.toggleAbout} />
       </div>
@@ -63,9 +92,11 @@ class LinkView extends React.Component {
 
   }
 
-  searchDataSource(event) {
+  searchDataSource = (event: KeyboardEvent)=> {
 
-    var filterString = document.getElementById("link-search-field").value;
+    var input = document.getElementById("link-search-field");
+
+    var filterString = (input instanceof HTMLInputElement) ? input.value : "";
 
     if (filterString !== "" && event.keyCode === 13 && this.state.dataSource.length > 0) {
 
@@ -81,7 +112,7 @@ class LinkView extends React.Component {
 
   }
 
-  toggleAbout(event) {
+  toggleAbout = (event: Event) => {
 
     this.setState({showAbout:!this.state.showAbout});
 
@@ -91,7 +122,13 @@ class LinkView extends React.Component {
 
 function isTouchDevice() {
 
+  if (document.documentElement instanceof Object) {
+
     return 'ontouchstart' in document.documentElement;
+
+  }
+
+  return false;
 
 }
 

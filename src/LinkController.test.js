@@ -1,30 +1,3 @@
-import ProjectList from './dataSources/ProjectList.json';
-import ProfileList from './dataSources/ProfileList.json';
-
-it('has properly poplated project list', () => {
-
-  for (var i = 0; i < ProjectList.length; i++) {
-
-    var project = ProjectList[i];
-    expect(project.name).not.toEqual(undefined);
-    expect(project.key).not.toEqual(undefined);
-
-  }
-
-});
-
-it('has property populated profile list', () => {
-
-  for (var i = 0; i < ProfileList.length; i++) {
-
-    var profile = ProfileList[i];
-    expect(profile.name).not.toEqual(undefined);
-    expect(profile.key).not.toEqual(undefined);
-
-  }
-
-});
-
 import LinkController, { urlForLink, openLink, imageUrlForLink } from './LinkController';
 
 const linkA = {

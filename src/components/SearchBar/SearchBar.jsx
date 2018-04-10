@@ -7,7 +7,7 @@ import './SearchBar.less'
 type SearchBarProps = {
 
   inputid: string,
-  handleKeyUp: () => void
+  handleKeyUp: (event: KeyboardEvent) => void
 
 }
 
