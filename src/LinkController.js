@@ -1,23 +1,25 @@
 // @flow
 
+import loadPublicResource from './PublicResourceLoader';
+
 type Link = {
 
-  name:string,
-  key:string,
-  url:string,
-  desc:string,
-  display_url:string
+  name: string,
+  key: string,
+  url: string,
+  desc: string,
+  display_url: string
 
 }
 
 class LinkController {
 
   name: string;
-  links: Array<Link>;
+  links: Array<Link> ;
 
   constructor(name: string, links: Array<Link>) {
 
-    function sortFunc(a,b) {
+    function sortFunc(a, b) {
 
       if (a.name < b.name) {
 
@@ -109,12 +111,7 @@ export function urlForLink(link: Link) {
 
 export function imageUrlForLink(link: Link) {
 
-  const publicUrl = process.env.PUBLIC_URL ? process.env.PUBLIC_URL : "";
-
-  // eslint-disable-next-line
-  (publicUrl: string);
-
-  return publicUrl + "/icons/" + link.key + ".svg"
+  return loadPublicResource("icons/" + link.key + ".svg");
 
 }
 
