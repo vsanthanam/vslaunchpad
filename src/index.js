@@ -4,5 +4,9 @@ import './index.less';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import { setupFirebase } from './parts/Firebase/Firebase';
+
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
+
+// setupFirebase();
