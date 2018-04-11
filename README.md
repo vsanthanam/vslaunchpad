@@ -21,8 +21,8 @@ check it out at `launchpad [dot] vsanthanam [dot] com`.
  ## run it locally
 
  * make sure you've got node and npm installed on your machine
- * clone the repo and run `npm install`
- * run `npm start`
+ * clone the repo and run `yarn install`
+ * run `yarn start`
 
  ## CI
 
