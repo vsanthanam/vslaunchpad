@@ -41,9 +41,9 @@ const linkE = {
 
 }
 
-var links = [linkB, linkC, linkA, linkE, linkD];
+var links = [[linkB, linkC, linkA, linkE, linkD]];
 
-const controller = new LinkController('links', links);
+const controller = new LinkController('links', links, false);
 
 it('has the correct name', () => {
 
@@ -53,7 +53,7 @@ it('has the correct name', () => {
 
 it('has the correct number of links', () => {
 
-  expect(controller.links.length).toEqual(links.length);
+  expect(controller.links.length).toEqual(5);
 
 });
 
@@ -69,7 +69,7 @@ it('alphabetizes links correctly', () => {
 
 it('searches correctly when blank', () => {
 
-  expect(controller.filteredLinks('').length).toEqual(links.length);
+  expect(controller.filteredLinks('').length).toEqual(5);
 
 });
 
