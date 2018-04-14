@@ -12,14 +12,15 @@ type Link = {
   key: string,
   url: string,
   desc: string,
-  display_url: string
+  display_url: string,
+  exclude: boolean
 
 }
 
 type AllViewProps = {};
 type AllViewState = {
 
-  links: Array<Link>
+  links: Array<Array<Link>>
 
 };
 
@@ -34,7 +35,7 @@ class AllView extends React.Component<AllViewProps, AllViewState> {
 
   render() {
 
-    var controller = new LinkController("all", this.state.links);
+    var controller = new LinkController("all", this.state.links, true);
 
     var loading = this.state.links.length === 0 ? true : false;
 

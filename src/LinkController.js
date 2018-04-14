@@ -8,16 +8,17 @@ type Link = {
   key: string,
   url: string,
   desc: string,
-  display_url: string
+  display_url: string,
+  exclude: boolean
 
 }
 
 class LinkController {
 
   name: string;
-  links: Array<Link> ;
+  links: Array<Link>;
 
-  constructor(name: string, links: Array<Link>) {
+  constructor(name: string, links: Array<Array<Link>>, mergeSections: boolean) {
 
     function sortFunc(a, b) {
 
@@ -36,7 +37,41 @@ class LinkController {
     }
 
     this.name = name;
-    this.links = links.sort(sortFunc);
+    this.links = [];
+
+    if (!mergeSections) {
+
+      for (var i = 0; i < links.length; i++) {
+
+        var sortedSection = links[i].sort(sortFunc);
+
+        for (var j = 0; j < sortedSection.length; j++) {
+
+          this.links.push(sortedSection[j]);
+
+        }
+
+      }
+
+    } else {
+
+      for (var k = 0; k < links.length; k++) {
+
+        for (var l = 0; l < links[k].length; l++) {
+
+          this.links.push(links[k][l]);
+
+        }
+
+      }
+
+      console.log(this.links);
+
+      this.links = this.links.sort(sortFunc);
+      this.links = this.links.filter(link => !link.exclude);
+      console.log(this.links);
+
+    }
 
   }
 

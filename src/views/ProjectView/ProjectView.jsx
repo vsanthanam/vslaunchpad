@@ -12,14 +12,15 @@ type Link = {
   key: string,
   url: string,
   desc: string,
-  display_url: string
+  display_url: string,
+  exclude: boolean
 
 }
 
 type ProjectViewProps = {};
 type ProjectViewState = {
 
-  projects: Array<Link>
+  projects: Array<Array<Link>>
 
 }
 
@@ -34,7 +35,7 @@ class ProjectView extends React.Component<ProjectViewProps, ProjectViewState> {
 
   render() {
 
-    var controller = new LinkController('projects', this.state.projects);
+    var controller = new LinkController('projects', this.state.projects, false);
 
     var loading = this.state.projects.length === 0 ? true : false;
 
@@ -52,7 +53,7 @@ class ProjectView extends React.Component<ProjectViewProps, ProjectViewState> {
 
       // this.controller = new LinkController("projects", data);
       this.setState({projects: this.state.projects.concat(data)});
-      console.log(data)
+      // console.log(data)
       // this.render();
 
     });

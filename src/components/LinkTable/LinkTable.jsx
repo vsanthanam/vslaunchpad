@@ -12,7 +12,8 @@ type Link = {
   key:string,
   url:string,
   desc:string,
-  display_url:string
+  display_url:string,
+  exclude: boolean
 
 }
 

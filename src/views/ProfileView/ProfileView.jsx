@@ -12,14 +12,15 @@ type Link = {
   key: string,
   url: string,
   desc: string,
-  display_url: string
+  display_url: string,
+  exclude: boolean
 
 }
 
 type ProfileViewProps = {};
 type ProfileViewState = {
 
-  profiles: Array<Link>
+  profiles: Array<Array<Link>>
 
 };
 
@@ -34,7 +35,7 @@ class ProfileView extends React.Component<ProfileViewProps, ProfileViewState> {
 
   render() {
 
-    var controller = new LinkController("profiles", this.state.profiles);
+    var controller = new LinkController("profiles", this.state.profiles, false);
 
     var loading = this.state.profiles.length === 0 ? true : false;
 
@@ -51,7 +52,7 @@ class ProfileView extends React.Component<ProfileViewProps, ProfileViewState> {
     getProfiles((data) => {
 
       this.setState({profiles: this.state.profiles.concat(data)});
-      console.log(data);
+      // console.log(data);
 
     });
 

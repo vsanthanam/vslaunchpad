@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://www.talktovarun.com",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "ajv": "^6.4.0",
     "custom-react-scripts": "^0.2.2",
@@ -17,11 +18,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-stage": "REACT_APP_USE_STAGE=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "stage": "firebase deploy -P staging",
-    "deploy": "firebase deploy"
+    "stage": "REACT_APP_USE_STAGE=true yarn build && firebase deploy -P staging",
+    "deploy": "yarn build && firebase deploy"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
